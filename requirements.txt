@@ -1,2 +1,3 @@
-python-pptx
 pandas
+python-pptx
+openpyxl

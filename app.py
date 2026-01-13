@@ -146,9 +146,8 @@ with st.sidebar:
     
     mtg_freq = st.number_input("定期MTG回数 / 月", value=2)
     workshop_count = st.number_input("勉強会開催回数", value=1, max_value=2 if company_count > 0 else 5)
-    
-    kickoff_h = 2.0 if company_count > 0 else 1.0
-    fixed_hours = (duration_months * mtg_freq * 1.0) + (workshop_count * 5.0) + kickoff_h + english_hours
+
+    fixed_hours = (duration_months * mtg_freq * 1.0) + (workshop_count * 5.0) + english_hours
 
 # --- メイン画面：タスク選択エリア ---
 st.title("🌱 Scope 3算定支援コンサルティング見積シミュレーション")
@@ -368,4 +367,5 @@ if selected_tasks_list and not is_special_case:
             file_name=file_name_full,
             mime="text/csv",
             use_container_width=True,
+
         )

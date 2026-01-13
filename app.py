@@ -207,7 +207,7 @@ if not df_master.empty:
                         is_checked = st.checkbox(f"　{row['Task']} ({calc_h:.1f}h)", key=t_key)
                         desc_text = str(row.get('Description', '')).strip()
                         if desc_text and desc_text != 'nan' and desc_text != '':
-                            st.markdown(f'<div class="desc-box">{desc_text}</div>', unsafe_allow_html=True)
+                            st.markdown(f'<div class="desc-box">💡 {desc_text}</div>', unsafe_allow_html=True)
 
                         if is_checked:
                             total_base_hours += calc_h
@@ -368,6 +368,7 @@ if selected_tasks_list and not is_special_case:
             use_container_width=True,
 
         )
+
 
 
 

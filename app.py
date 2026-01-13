@@ -156,7 +156,7 @@ total_base_hours = fixed_hours
 selected_tasks_list = []
 
 # 固定項目の自動集計
-selected_tasks_list.append({"Category": "その他", "Task": "キックオフ", "Hours"})
+selected_tasks_list.append({"Category": "その他", "Task": "キックオフ", "Hours":})
 selected_tasks_list.append({"Category": "その他", "Task": "定期MTG", "Hours": duration_months * mtg_freq})
 if workshop_count > 0:
     selected_tasks_list.append({"Category": "その他", "Task": "勉強会", "Hours": workshop_count * 5.0})
@@ -369,4 +369,5 @@ if selected_tasks_list and not is_special_case:
             use_container_width=True,
 
         )
+
 
